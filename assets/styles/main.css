@@ -135,3 +135,20 @@ article {
   grid-area: article-aside;
   justify-self: flex-start;
 }
+
+.three-column-article {
+  grid-template-areas:
+    "article-header article-header article-header"
+    "article-main article-aside article-third-column";
+    grid-template-columns: min-content auto auto;
+}
+
+.article-third-column {
+  grid-area: article-third-column;
+}
+
+.image-temp{
+  width: 150px;
+  height: 150px;
+  background-color: blanchedalmond;
+}
