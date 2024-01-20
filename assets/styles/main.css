@@ -140,15 +140,49 @@ article {
   grid-template-areas:
     "article-header article-header article-header"
     "article-main article-aside article-third-column";
-    grid-template-columns: min-content auto auto;
+  grid-template-columns: min-content auto auto;
 }
 
 .article-third-column {
   grid-area: article-third-column;
 }
 
-.image-temp{
+.image-temp {
   width: 150px;
   height: 150px;
   background-color: blanchedalmond;
+}
+
+footer {
+  background-color: burlywood;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+.footer-legal-wrapper{
+  background-color: brown;
+}
+
+.footer-main,
+.footer-legal {
+  max-width: 1300px;
+  margin: 0px auto;
+}
+
+.footer-main{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.slate-group-logo{
+  height: 50px;
+  background-color: brown;
+}
+
+.footer-legal{
+  display: flex;
+  justify-content: space-between;
 }
