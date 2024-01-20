@@ -74,7 +74,7 @@ main {
   }
 }
 
-.culture.article {
+article {
   background-color: beige;
   display: grid;
   grid-template-areas:
@@ -83,7 +83,7 @@ main {
   grid-template-columns: min-content auto;
 }
 
-.culture .article-header {
+.article-header {
   grid-area: article-header;
   display: grid;
   grid-template-areas:
@@ -92,46 +92,46 @@ main {
     "categories categories";
 }
 
-.culture .article-header .subtitle {
+.article-header .subtitle {
   grid-area: subtitle;
 }
 
-.culture .article-header .title {
+.article-header .title {
   grid-area: title;
 }
 
-.culture .article-header .view-all {
+.article-header .view-all {
   grid-area: view-all;
   justify-self: flex-end;
 }
 
-.culture .article-header .categories {
+.article-header .categories {
   grid-area: categories;
 }
 
-.culture .article-header .categories li {
+.article-header .categories li {
   display: inline;
 }
 
-.culture .article-main {
+.article-main {
   grid-area: article-main;
   position: relative;
 }
 
-.culture .article-main .image {
+.article-main .image {
   width: 900px;
   height: 600px;
   background-color: blanchedalmond;
 }
 
-.culture .article-main .article-info {
+.article-main .article-info {
   background-color: beige;
   position: absolute;
   bottom: 0px;
   z-index: 1;
 }
 
-.culture .article-aside {
+.article-aside {
   grid-area: article-aside;
   justify-self: flex-start;
 }
