@@ -3,18 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/styles/" />
+    <link rel="stylesheet" href="./assets/styles/main.css" />
     <title>Slate Magazine - Politics, Business, Technology and the Arts</title>
   </head>
   <body>
     <header>
-      <img src="./assets/images/" alt="slate logo" />
-      <div class="search-and-light"></div>
-      <nav></nav>
+      <div class="top-bar-wrapper">
+        <div class="top-bar">
+          <ul>
+            <li><a href="#">Slate Shop</a></li>
+            <li><a href="#">Daily Quiz</a></li>
+            <li><a href="#">Newsletters</a></li>
+            <li><a href="#">Sign in</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="main-header-wrapper">
+        <div class="main-header">
+          <img id="header-logo" src="./assets/images/" alt="slate logo" />
+          <div class="search-and-light">
+            <ul>
+              <li><button>Search</button></li>
+              <li><button>Light</button></li>
+            </ul>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="#">News & Politics</a></li>
+              <li><a href="#">Culture</a></li>
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Human Interest</a></li>
+              <li><a href="#">Podcasts</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
     <main>
       <article id="culture-article" class="article"></article>
-      <article id="tech-and-business-articel" class="article"></article>
+      <article id="tech-and-business-article" class="article"></article>
       <article id="human-interests-article" class="article"></article>
     </main>
     <footer>
