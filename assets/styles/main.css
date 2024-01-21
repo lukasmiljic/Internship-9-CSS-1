@@ -15,7 +15,11 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, serif;
+}
+
+header {
+  margin-bottom: 30px;
 }
 
 header li {
@@ -80,7 +84,7 @@ header .search-and-light li {
 }
 
 header .search-and-light button {
-  font-size: 14px;
+  font-size: 14.6px;
   color: white;
   background: none;
   border: none;
@@ -151,6 +155,8 @@ article {
     "article-header article-header"
     "article-main article-aside";
   grid-template-columns: min-content auto;
+  margin-bottom: 40px;
+  column-gap: 20px;
 }
 
 .article-header {
@@ -160,17 +166,28 @@ article {
     "subtitle subtitle"
     "title view-all"
     "categories categories";
+  grid-template-rows: min-content;
+  grid-template-columns: 70% auto;
 }
 
 .article-header .subtitle {
+  font-size: 14.6px;
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.07em;
   color: var(--fg-light);
   grid-area: subtitle;
+  margin-bottom: -5px;
 }
 
 .article-header .title {
+  font-size: 80px;
+  text-transform: uppercase;
   color: var(--light-bg);
   cursor: pointer;
   grid-area: title;
+  margin-bottom: 5px;
 }
 
 .article-header .title:hover {
@@ -178,12 +195,34 @@ article {
 }
 
 .article-header .view-all {
+  color: var(--light-bg);
+  font-size: 13.5px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
   grid-area: view-all;
   justify-self: flex-end;
+  align-self: center;
+  text-decoration: none;
+  position: relative;
+}
+
+.article-header .view-all::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--red);
+}
+
+.article-header .view-all:hover {
+  color: var(--red);
 }
 
 .article-header .categories {
   grid-area: categories;
+  margin-bottom: 25px;
 }
 
 .article-header .categories li {
@@ -191,21 +230,15 @@ article {
 }
 
 .article-header .categories li {
+  font-size: 15.6px;
+  font-weight: 600;
   cursor: pointer;
-  color: var(--title-text);
+  color: var(--title-text-hover);
+  padding-right: 25px;
 }
 
 .article-header .categories li:hover {
-  color: var(--title-text-hover);
-}
-
-.article-header .view-all {
-  color: var(--light-bg);
-  text-decoration-color: var(--red);
-}
-
-.article-header .view-all:hover {
-  color: var(--red);
+  opacity: 80%;
 }
 
 .article-main {
@@ -215,23 +248,30 @@ article {
 }
 
 .article-main .image {
-  width: 900px;
-  height: 600px;
+  width: 922px;
+  height: 612px;
   background-color: lightgrey;
 }
 
 .article-main .article-info {
+  width: 75%;
   background-color: white;
+  padding: 15px 25px 0 0;
   position: absolute;
   bottom: 0px;
   z-index: 1;
 }
 
 .article-main .article-info .author {
-  color: var(--fg-light);
+  font-size: 14px;
+  letter-spacing: 0.9px;
+  color: var(--fg-hover);
 }
 
 .article-main .article-info .article-title {
+  font-size: 39px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 600;
   color: var(--title-text);
 }
 
@@ -240,19 +280,25 @@ article {
 }
 
 .article-main .article-info .article-subtitle {
+  font-size: 17.8px;
   color: var(--fg);
 }
 
 .article-aside {
+  /* margin-left: 20px; */
   grid-area: article-aside;
   justify-self: flex-start;
 }
 
 .article-aside-article .article-author {
+  font-size: 13.7px;
   color: var(--fg-hover);
 }
 
-.article-aside-article .article-author {
+.article-aside-article .article-title {
+  font-size: 15.6;
+  font-weight: 700;
+  margin-bottom: 15px;
   color: var(--fg);
 }
 
@@ -260,25 +306,41 @@ article {
   grid-template-areas:
     "article-header article-header article-header"
     "article-main article-aside article-third-column";
-  grid-template-columns: min-content auto auto;
+  grid-template-columns: 42% auto 27%;
+  column-gap: 20px;
+}
+
+.three-column-article .image {
+  width: 100%;
+  height: 365px;  /*remove this*/
+}
+
+.three-column-article .article-main .article-info .article-title {
+  font-size: 21px;
 }
 
 .article-third-column {
   grid-area: article-third-column;
 }
 
+.image-temp {
+  width: 100%;
+  height: 238px;
+  background-color: lightgray;
+  margin-bottom: 12px;
+}
+
 .article-third-column .article-author {
+  font-size: 13.7px;
   color: var(--fg-hover);
+  margin-bottom: 1.5px;
 }
 
 .article-third-column .article-title {
+  font-size: 20.2px;
+  font-weight: 700;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   color: var(--fg);
-}
-
-.image-temp {
-  width: 150px;
-  height: 150px;
-  background-color: lightgray;
 }
 
 footer {
