@@ -75,7 +75,7 @@ header .search-and-light {
   padding-top: 5px;
 }
 
-header .search-and-light li{
+header .search-and-light li {
   padding-left: 15px;
 }
 
@@ -94,15 +94,27 @@ header nav {
 }
 
 header nav ul li a {
+  display: inline-block;
+  position: relative;
   font-size: 20px;
   color: white;
   text-decoration: none;
-  padding-left: 30px;
+  margin-left: 30px;
 }
 
-header nav ul li a:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--red);
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--red);
+}
+
+header nav ul li a:hover::after {
+  transform: scaleX(1);
 }
 
 main {
