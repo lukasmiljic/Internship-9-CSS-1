@@ -15,6 +15,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  font-family: sans-serif;
 }
 
 header li {
@@ -22,15 +23,20 @@ header li {
 }
 
 .top-bar {
+  height: 40px;
   max-width: 1300px;
   margin: 0 auto;
   text-align: end;
-  justify-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 
 .top-bar ul li a {
   color: var(--fg);
   text-decoration: none;
+  padding-right: 30px;
+  font-size: 14px;
 }
 
 .top-bar ul li a:hover {
@@ -39,6 +45,7 @@ header li {
 }
 
 .main-header-wrapper {
+  height: 100px;
   color: white;
   background-color: var(--dark-bg);
 }
@@ -46,14 +53,18 @@ header li {
 .main-header {
   max-width: 1300px;
   margin: 0px auto;
+  height: 100%;
   display: grid;
   grid-template-areas:
     "logo row1"
+    "logo row2"
     "logo row2";
   grid-template-columns: min-content auto;
 }
 
 header #header-logo {
+  width: 258px; /*change this*/
+  height: 78px;
   grid-area: logo;
   align-self: flex-end;
 }
@@ -61,9 +72,15 @@ header #header-logo {
 header .search-and-light {
   grid-area: row1;
   justify-self: flex-end;
+  padding-top: 5px;
+}
+
+header .search-and-light li{
+  padding-left: 15px;
 }
 
 header .search-and-light button {
+  font-size: 14px;
   color: white;
   background: none;
   border: none;
@@ -73,11 +90,14 @@ header .search-and-light button {
 header nav {
   grid-area: row2;
   justify-self: flex-start;
+  align-self: center;
 }
 
 header nav ul li a {
+  font-size: 20px;
   color: white;
   text-decoration: none;
+  padding-left: 30px;
 }
 
 header nav ul li a:hover {
